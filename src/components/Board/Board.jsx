@@ -68,9 +68,10 @@ class Board extends React.Component {
     resetGame = () => {
         this.setState({
             squares: new Array(9).fill(''),
-            isX: this.selectFirstPlayer(),
+            isX: null,
             winner: null
         });
+        this.selectFirstPlayer();
     }
 
     render() {
@@ -94,7 +95,7 @@ class Board extends React.Component {
                 </div>
                 <div className="winner">And the winner is: <strong>{this.state.winner}</strong></div>
                 <div className="reset">
-                    <button onClick={this.resetGame} disabled={this.state.winner ? '' : 'disabled'}>Reset!</button>
+                    <button onClick={this.resetGame}>Reset!</button>
                 </div>
             </div>
         )
