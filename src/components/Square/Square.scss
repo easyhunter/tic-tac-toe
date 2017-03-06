@@ -1,0 +1,14 @@
+.square {
+  display: inline-block;
+
+  button {
+    float: left;
+    margin: 1px;
+    background-color: #fff;
+    border: 1px solid #999;
+    width: 100px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 50px;
+  }
+}
